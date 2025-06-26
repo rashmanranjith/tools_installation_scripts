@@ -62,6 +62,9 @@ Now access Artifactory UI by going to browser and enter public dns name with por
 http://change to_artifactory_publicdns_name:8081
 
 To Push the Jar file to Jfrog Artifactory:
+-> go to /var/lib/jenkins/workspace/<Pipeline>/target
+
+then enter the below command:
 curl -X PUT -u admin \
   -T kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar \
   http://<EC2IP>:8082/artifactory/example-repo-local/
